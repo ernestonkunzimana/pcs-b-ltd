@@ -1,0 +1,18 @@
+
+services:
+  pcsb-postgres:
+    image: postgres:15
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: your_password
+      POSTGRES_DB: pcsbltd
+    ports:
+      - "5433:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+  pcsb-redis:
+    image: redis:7
+    ports:
+      - "6379:6379"
+volumes:
+  pgdata:
