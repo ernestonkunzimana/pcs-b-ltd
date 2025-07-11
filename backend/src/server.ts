@@ -2,8 +2,12 @@ import express from 'express';
 import cors from 'cors';
 import http from 'http';
 import { Server } from 'socket.io';
-import projectsRoutes from './routes/projectsRoutes';
 import dotenv from 'dotenv';
+
+import projectsRoutes from './routes/projectsRoutes';
+import invoicesRoutes from './routes/invoicesRoutes';
+import usersRoutes from './routes/usersRoutes';
+import tasksRoutes from './routes/tasksRoutes';
 
 dotenv.config();
 
@@ -13,6 +17,9 @@ app.use(express.json());
 
 // API Routes
 app.use('/api/projects', projectsRoutes);
+app.use('/api/invoices', invoicesRoutes);
+app.use('/api/users', usersRoutes);
+app.use('/api/tasks', tasksRoutes);
 
 // Create HTTP server and Socket.io instance
 const server = http.createServer(app);
@@ -24,7 +31,7 @@ const io = new Server(server, {
 
 // Socket.io connection
 io.on('connection', (socket) => {
-  console.log(`New user connected: ${socket.id}`);
+  console.log(`Socket connected: ${socket.id}`);
   socket.on('disconnect', () => {
     console.log(`User disconnected: ${socket.id}`);
   });
