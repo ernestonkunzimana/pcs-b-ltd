@@ -14,6 +14,7 @@ import productsRoutes from './routes/productsRoutes';
 
 dotenv.config();
 
+// Initialize Express app
 const app = express();
 app.use(cors());
 app.use(express.json());
@@ -23,9 +24,9 @@ app.use('/api/projects', projectsRoutes);
 app.use('/api/invoices', invoicesRoutes);
 app.use('/api/users', usersRoutes);
 app.use('/api/tasks', tasksRoutes);
-app.use('/api', paymentsRoutes);
-app.use('/api', customersRoutes);
-app.use('/api', productsRoutes);
+app.use('/api/payments', paymentsRoutes);
+app.use('/api/customers', customersRoutes);
+app.use('/api/products', productsRoutes);
 
 // Create HTTP server and Socket.io instance
 const server = http.createServer(app);
@@ -38,6 +39,7 @@ const io = new Server(server, {
 // Socket.io connection
 io.on('connection', (socket) => {
   console.log(`Socket connected: ${socket.id}`);
+
   socket.on('disconnect', () => {
     console.log(`User disconnected: ${socket.id}`);
   });
@@ -47,5 +49,5 @@ io.on('connection', (socket) => {
 const PORT = process.env.PORT || 5000;
 server.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
-  app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
 });
+app.set('io', io);
