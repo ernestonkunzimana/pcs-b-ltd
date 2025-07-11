@@ -8,6 +8,9 @@ import projectsRoutes from './routes/projectsRoutes';
 import invoicesRoutes from './routes/invoicesRoutes';
 import usersRoutes from './routes/usersRoutes';
 import tasksRoutes from './routes/tasksRoutes';
+import paymentsRoutes from './routes/paymentsRoutes';
+import customersRoutes from './routes/customersRoutes';
+import productsRoutes from './routes/productsRoutes';
 
 dotenv.config();
 
@@ -46,12 +49,7 @@ server.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
 
-import express from 'express';
-import cors from 'cors';
-import dotenv from 'dotenv';
-import paymentsRoutes from './routes/paymentsRoutes';
-import customersRoutes from './routes/customersRoutes';
-import productsRoutes from './routes/productsRoutes';
+
 
 dotenv.config();
 
