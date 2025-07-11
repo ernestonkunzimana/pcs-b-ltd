@@ -1,21 +1,33 @@
 import { Request, Response, NextFunction } from 'express';
-import jwt from 'jsonwebtoken';
+import jwt, { JwtPayload } from 'jsonwebtoken';
+import dotenv from 'dotenv';
 
-const jwtSecret = process.env.JWT_SECRET || 'your_jwt_secret';
+dotenv.config();
 
-export function authenticateToken(req: Request, res: Response, next: NextFunction) {
-  const authHeader = req.headers['authorization'];
-  const token = authHeader && authHeader.split(' ')[1];
+const jwtSecret = process.env.JWT_SECRET as string;
+
+if (!jwtSecret) {
+  throw new Error('JWT_SECRET is not defined in environment variables.');
+}
+
+export interface AuthenticatedRequest extends Request {
+  user?: string | JwtPayload;
+}
+
+export const authenticateToken = (req: AuthenticatedRequest, res: Response, next: NextFunction) => {
+  const authHeader = req.headers.authorization;
+  const token = authHeader?.split(' ')[1];
 
   if (!token) {
-    return res.status(401).json({ message: 'Token missing' });
+    return res.status(401).json({ message: 'Unauthorized: No token provided' });
   }
 
-  jwt.verify(token, jwtSecret, (err, user) => {
+  jwt.verify(token, jwtSecret, (err, decoded) => {
     if (err) {
-      return res.status(403).json({ message: 'Token invalid' });
+      return res.status(403).json({ message: 'Invalid or expired token' });
     }
-    (req as any).user = user;
+
+    req.user = decoded;
     next();
   });
-}
+};
