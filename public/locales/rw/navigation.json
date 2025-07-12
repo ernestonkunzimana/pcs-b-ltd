@@ -1,0 +1,23 @@
+{
+  "dashboard": "Imbonerahamwe",
+  "projects": "Imishinga",
+  "inventory": "Imbonerahamwe",
+  "transactions": "Ibikorwa",
+  "esg_metrics": "Ibipimo bya ESG",
+  "users": "Abakoresha",
+  "settings": "Amagenamiterere",
+  "reports": "Raporo",
+  "analytics": "Isesengura",
+  "notifications": "Amatangazo",
+  "profile": "Umwirondoro",
+  "help": "Ubufasha",
+  "support": "Gufasha",
+  "documentation": "Inyandiko",
+  "api": "API",
+  "integrations": "Guhuza",
+  "billing": "Kwishyura",
+  "security": "Umutekano",
+  "audit_log": "Inyandiko z'ubugenzuzi",
+  "backup": "Kubika",
+  "maintenance": "Kubungabunga"
+}

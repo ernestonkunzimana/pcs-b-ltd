@@ -1,0 +1,23 @@
+{
+  "dashboard": "Tableau de bord",
+  "projects": "Projets",
+  "inventory": "Inventaire",
+  "transactions": "Transactions",
+  "esg_metrics": "Métriques ESG",
+  "users": "Utilisateurs",
+  "settings": "Paramètres",
+  "reports": "Rapports",
+  "analytics": "Analytique",
+  "notifications": "Notifications",
+  "profile": "Profil",
+  "help": "Aide",
+  "support": "Support",
+  "documentation": "Documentation",
+  "api": "API",
+  "integrations": "Intégrations",
+  "billing": "Facturation",
+  "security": "Sécurité",
+  "audit_log": "Journal d'audit",
+  "backup": "Sauvegarde",
+  "maintenance": "Maintenance"
+}

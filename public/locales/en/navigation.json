@@ -1,0 +1,23 @@
+{
+  "dashboard": "Dashboard",
+  "projects": "Projects",
+  "inventory": "Inventory",
+  "transactions": "Transactions",
+  "esg_metrics": "ESG Metrics",
+  "users": "Users",
+  "settings": "Settings",
+  "reports": "Reports",
+  "analytics": "Analytics",
+  "notifications": "Notifications",
+  "profile": "Profile",
+  "help": "Help",
+  "support": "Support",
+  "documentation": "Documentation",
+  "api": "API",
+  "integrations": "Integrations",
+  "billing": "Billing",
+  "security": "Security",
+  "audit_log": "Audit Log",
+  "backup": "Backup",
+  "maintenance": "Maintenance"
+}

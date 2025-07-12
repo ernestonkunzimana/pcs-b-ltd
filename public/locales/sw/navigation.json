@@ -1,0 +1,23 @@
+{
+  "dashboard": "Dashibodi",
+  "projects": "Miradi",
+  "inventory": "Hesabu",
+  "transactions": "Miamala",
+  "esg_metrics": "Vipimo vya ESG",
+  "users": "Watumiaji",
+  "settings": "Mipangilio",
+  "reports": "Ripoti",
+  "analytics": "Uchambuzi",
+  "notifications": "Arifa",
+  "profile": "Profaili",
+  "help": "Msaada",
+  "support": "Uongozi",
+  "documentation": "Nyaraka",
+  "api": "API",
+  "integrations": "Miunganisho",
+  "billing": "Malipo",
+  "security": "Usalama",
+  "audit_log": "Kumbukumbu za Ukaguzi",
+  "backup": "Nakala rudufu",
+  "maintenance": "Matengenezo"
+}

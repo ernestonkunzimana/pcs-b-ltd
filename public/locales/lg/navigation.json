@@ -1,0 +1,23 @@
+{
+  "dashboard": "Olukalala",
+  "projects": "Pulojekiti",
+  "inventory": "Eby'okubalira",
+  "transactions": "Ebikolwa",
+  "esg_metrics": "Ebipimo bya ESG",
+  "users": "Abakozesa",
+  "settings": "Enteekateeka",
+  "reports": "Alipoota",
+  "analytics": "Okwekenneenya",
+  "notifications": "Okutegeeza",
+  "profile": "Ebikufaako",
+  "help": "Obuyambi",
+  "support": "Okuyamba",
+  "documentation": "Ebiwandiiko",
+  "api": "API",
+  "integrations": "Okugattamu",
+  "billing": "Okusasula",
+  "security": "Obukuumi",
+  "audit_log": "Ebiwandiiko by'okukebera",
+  "backup": "Okutereka",
+  "maintenance": "Okulongoosa"
+}
